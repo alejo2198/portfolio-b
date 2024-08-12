@@ -1,0 +1,122 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles//partials/variables'as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/animations' as *;
+
+/* PROJECT */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.37rem;
+  }
+  
+  .project {
+    width: 18.125rem;
+    height: 32rem;
+    border-radius: 1.25rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .project--featured {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 5px 0px #9290c3;
+  }
+  
+  .project_title-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+    position: relative;
+  }
+  .project_link {
+    display: flex;
+    gap: 0.2rem;
+    border-bottom: 1px solid #9290c3;
+    padding-bottom: 0.2rem;
+  }
+  .project_link p {
+    width: 4.3rem;
+    color: #9290c3;
+  }
+  
+  .project_title {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+  .featured {
+    width: max-content;
+    font-weight: 700;
+    background: linear-gradient(90deg, #fff 0%, #9290c3 51.34%, #535c91 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .project_description {
+    margin-top: 0.75rem;
+  }
+  
+  .project_languages {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+  }
+  .project_skill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.3125rem;
+    background-color: #37364a;
+  }
+  .project_skill_name {
+    text-transform: uppercase;
+  }
+  .project_link--absolute {
+    position: absolute;
+    display: flex;
+    gap: 0.75rem;
+    border-bottom: 1px solid #9290c3;
+    padding-bottom: 0.2rem;
+    flex-grow: 1;
+    right: 0;
+    top: 0;
+    color: #9290c3;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .projects-container {
+      justify-content: space-evenly;
+      gap: min(4vw, 3rem);
+    }
+  }
+  
+  @media only screen and (min-width: 1080px) {
+    #qrp {
+      content: url("./assets/images/projects/qrp-desktop.png");
+    }
+    #sabfit {
+      content: url("./assets/images/projects/sabfit-desktop.png");
+    }
+    #flf {
+      content: url("./assets/images/projects/flf-desktop.png");
+    }
+    #skoro {
+      content: url("./assets/images/projects/skoro-desktop.png");
+    }
+    .projects-container {
+      row-gap: 4.7rem;
+    }
+    .project {
+      width: 26.875rem;
+      height: 32.1875rem;
+      padding: 1.5rem;
+    }
+    .project_link p {
+      width: 5rem;
+    }
+    .project_skill_name {
+      text-align: center;
+    }
+  }

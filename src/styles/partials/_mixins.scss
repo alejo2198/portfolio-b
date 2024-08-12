@@ -1,0 +1,19 @@
+//BREAKPOINTS
+
+@mixin tablet{
+    @media (min-width:768px){
+        @content;
+    }
+}
+@mixin desktop{
+    @media (min-width:1280px){
+        @content;
+    }
+}
+
+//STYLE MIXINS
+
+@mixin styleText($font-size,$font-weight){
+    font-size: $font-size;
+    font-weight: $font-weight;
+}

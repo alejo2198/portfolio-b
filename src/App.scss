@@ -1,0 +1,59 @@
+@use './styles/partials/mixins' as *;
+@use './styles//partials/variables'as *;
+@use './styles/partials/fonts' as *;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Kaisei-Decol';
+    font-weight: 400;
+    color:white;
+    background-color: $background-color;
+}
+
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+  
+
+// p{
+//     color:white;
+//     @include styleText(3rem,400);
+//     line-height: $m-body-lh;
+//     @include tablet{
+//         @include styleText($t-body-fs,400);
+//         line-height: $t-body-lh;
+//     }
+//     @include desktop{
+//         @include styleText($d-body-fs,400);
+//         line-height: $d-body-lh;
+//     }
+// }
+
+h2{
+    margin: 1.5rem 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #9290c3 0%, #fcfcff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: max-content;
+    align-self: flex-start;
+    color:$primary-color;
+}
+
+button{
+    cursor: pointer;
+}

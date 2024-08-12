@@ -1,0 +1,27 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles//partials/variables'as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/animations' as *;
+
+.skill {
+    display: flex;
+    width: 9.0625rem;
+    height: 2.8125rem;
+    padding: 0.6rem 0.5rem;
+    align-items: center;
+    border-radius: 0.3125rem;
+    background-color: #37364a;
+    cursor: pointer;
+    &:hover{
+        background: linear-gradient(95deg, #37364A 1.25%, #9290C3 20.72%, #37364A 100%);
+    }
+    &_icon{
+        font-size: 1.375rem;
+    }
+    &_name{
+        text-transform: uppercase;
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+  
