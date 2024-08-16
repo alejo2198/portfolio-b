@@ -94,29 +94,15 @@
   
   @media only screen and (min-width: 1080px) {
     #qrp {
-      content: url("./assets/images/projects/qrp-desktop.png");
+      content: url("../../assets/images/projects/qrp-desktop.png");
     }
     #sabfit {
-      content: url("./assets/images/projects/sabfit-desktop.png");
+      content: url("../../assets/images/projects/sabfit-desktop.png");
     }
     #flf {
-      content: url("./assets/images/projects/flf-desktop.png");
+      content: url("../../assets/images/projects/flf-desktop.png");
     }
     #skoro {
-      content: url("./assets/images/projects/skoro-desktop.png");
-    }
-    .projects-container {
-      row-gap: 4.7rem;
-    }
-    .project {
-      width: 26.875rem;
-      height: 32.1875rem;
-      padding: 1.5rem;
-    }
-    .project_link p {
-      width: 5rem;
-    }
-    .project_skill_name {
-      text-align: center;
+      content: url("../../assets/images/projects/skoro-desktop.png");
     }
   }

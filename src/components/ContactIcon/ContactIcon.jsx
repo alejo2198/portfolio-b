@@ -1,7 +1,6 @@
 import './ContactIcon.scss'
 
 const ContactIcon = ({contactIcon}) => {
-    console.log
     return (
         <a href={contactIcon.link} className="contact_link">
             <div className="icon-container">

@@ -25,6 +25,24 @@ a {
     text-decoration: none;
     color: white;
 }
+/* UTILITY CLASSES */
+
+.hide {
+    display: none;
+    @include tablet{
+        display: block;
+    }
+  }
+  .remove_margin {
+    margin-top: 0;
+  }
+  .grayscale {
+    filter: grayscale(0.3);
+  }
+  .new_line {
+    display: block;
+    width: 10rem;
+  }
   
 
 // p{

@@ -26,6 +26,7 @@
         font-weight: 700;
     }
     &_link{
+
         display: flex;
         gap: 0.2rem;
         border-bottom: 1px solid #9290c3;
@@ -35,6 +36,9 @@
         width: 4.3rem;
         color: #9290c3;
       }
+    &_link img{
+      height:1rem;
+    }
   }
 
   
@@ -76,4 +80,18 @@
     right: 0;
     top: 0;
     color: #9290c3;
+  }
+  .projects-container {
+    row-gap: 4.7rem;
+  }
+  .project {
+    width: 26.875rem;
+    height: 32.1875rem;
+    padding: 1.5rem;
+  }
+  .project_link p {
+    width: fit-content;
+  }
+  .project_skill_name {
+    text-align: center;
   }

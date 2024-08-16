@@ -18,6 +18,23 @@
         position: relative;
         top: 3px;
     }
+    &_icon{
+        height:1.5rem;
+        filter: invert(100%);
+        position: absolute;
+        top:.5rem;
+        &--right{
+            @extend .skills_icon;
+            right:.25rem;
+        }
+        &--left{
+            @extend .skills_icon;
+            transform: rotate(180deg);
+            left:.25rem;
+        }
+    }
+    
+    
     &_tab{
         font-size: 1rem;
         font-weight: 500;
