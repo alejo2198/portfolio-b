@@ -24,22 +24,28 @@
     &--subheader{
       display: block;
     }
+    @include tablet{
+        font-size: 2.625rem;
+        margin-bottom: 2.75rem;
+    }
+    @include desktop{
+      font-size: 3.125rem;
+      margin-bottom: 2rem;
+    }
+    }
 
+    &_paragraph{
+      margin-bottom: 1rem;
+    }
+    &_interests_list{
+      list-style-type: disc;
+      margin-left: 1.2rem;
+    }
+    &_interest{
+      font-size: 0.875rem;
+    }
   }
 
-  &_paragraph{
-    margin-bottom: 1rem;
-  }
-  &_interests_list{
-    list-style-type: disc;
-    margin-left: 1.2rem;
-  }
-  &_interest{
-    font-size: 0.875rem;
-  }
-  
-}
-  
 .profile_image {
   width: 15rem;
   height: 20rem;
@@ -57,7 +63,7 @@
 .layout-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 0 $small-spacing;
+  
 }
   
   @media only screen and (min-width: 768px) {

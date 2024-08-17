@@ -3,16 +3,6 @@
 @use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/animations' as *;
 
-.hamburger_menu::before,
-.hamburger_menu::after,
-.hamburger_menu input {
-  content: " ";
-  width: 1.5625rem;
-  height: 0.1875rem;
-  background-color: white;
-  border-radius: 20rem;
-}
-
 .hamburger_menu {
   display: flex;
   border-radius: 100%;
@@ -26,15 +16,38 @@
   position: absolute;
   right: 1rem;
   top: 1rem;
-  animation: slideLeft .5s ease-in ;
+
+  &::before,
+  &::after,
+  input {
+    content: " ";
+    width: 1.5625rem;
+    height: 0.1875rem;
+    background-color: white;
+    border-radius: 20rem;
+  }
+
+  input {
+    appearance: none;
+    align-self: flex-start;
+    margin-left: 0.6rem;
+    outline: none;
+    pointer-events: none;
+  }
 }
 
-.hamburger_menu input {
-  appearance: none;
-  align-self: flex-start;
-  margin-left: 0.6rem;
-  outline: none;
-  pointer-events: none;
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 7.5rem;
+  background-color: $primary-color;
+ 
+
+  .nav_link:hover {
+    text-decoration: underline;
+  }
 }
 
 /* NAV */
@@ -48,18 +61,24 @@
     background-color: #535c91;
     animation: slideDown .5s ease-in ;
     margin-bottom: -6rem;
+    @include tablet {
+      justify-content: flex-start;
+      gap:3rem
+    }
     
   &__bar{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: $extra-small-spacing;
     
   }
   &__links{
     display: flex;
-    justify-content: space-around;
-    margin-top: $extra-small-spacing;
+    flex: 1;
+    max-width: 25rem;
+    justify-content: space-between;
+    margin-top: 3rem
   }
 
   &__link:hover{
@@ -94,5 +113,31 @@
     display:none;
 }
 
+@media only screen and (min-width: 768px) {
+  .hamburger_menu {
+    display: none;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    width: 3.7rem;
+    height: 100%;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .nav__links {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3.5rem;
+  }
+  .nav__links li {
+    transform: rotate(0.25turn);
+  }
+  .close {
+    display: none;
+  }}
 
 

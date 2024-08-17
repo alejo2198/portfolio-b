@@ -2,76 +2,104 @@
 @use './styles//partials/variables'as *;
 @use './styles/partials/fonts' as *;
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin:0;
-}
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-    font-family: 'Kaisei-Decol';
-    font-weight: 400;
-    color:white;
-    background-color: $background-color;
+/* RESETS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* ELEMENT STYLES */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $background-color;
+  font-family: "Kaisei Opti", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 a {
-    text-decoration: none;
-    color: white;
-}
-/* UTILITY CLASSES */
-
-.hide {
-    display: none;
-    @include tablet{
-        display: block;
-    }
-  }
-  .remove_margin {
-    margin-top: 0;
-  }
-  .grayscale {
-    filter: grayscale(0.3);
-  }
-  .new_line {
-    display: block;
-    width: 10rem;
-  }
-  
-
-// p{
-//     color:white;
-//     @include styleText(3rem,400);
-//     line-height: $m-body-lh;
-//     @include tablet{
-//         @include styleText($t-body-fs,400);
-//         line-height: $t-body-lh;
-//     }
-//     @include desktop{
-//         @include styleText($d-body-fs,400);
-//         line-height: $d-body-lh;
-//     }
-// }
-
-h2{
-    margin: 1.5rem 0;
-    font-size: 1.75rem;
-    font-weight: 700;
-    background: linear-gradient(90deg, #9290c3 0%, #fcfcff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: max-content;
-    align-self: flex-start;
-    color:$primary-color;
+  text-decoration: none;
+  color: white;
 }
 
-button{
-    cursor: pointer;
+h1 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, #9290c3 0%, #fcfcff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  align-self: center;
+  margin-bottom: 1.13rem;
+}
+h1 span {
+  display: block;
+}
+h2 {
+  margin: 1.5rem 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #9290c3 0%, #fcfcff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: max-content;
+  align-self: flex-start;
+}
+h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+p {
+  font-size: 0.875rem;
+}
+section {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.625rem;
+    margin-bottom: 2.75rem;
+  }
+  .wrapper {
+    margin-left: 3.7rem;
+  }
+  section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  h1 {
+    font-size: 3.125rem;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    margin: 2rem 0;
+  }
+  section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+  p {
+    font-size: 1rem;
+  }
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import visit_link from '../../assets/icons/visit_link.svg';
+import './Project.scss'
 
+import visit_link from '../../assets/icons/visit_link.svg';
 import sabfit_image from '../../assets/images/projects/sabfit.png';
 import qrp_image from '../../assets/images/projects/qrp.png';
 import flf_image from '../../assets/images/projects/flf.png';
@@ -25,7 +25,7 @@ const Project = ({project}) => {
 
 
     return (
-        <article class={`project ${project.isFeatured ? 'project--featured':''}"`}>
+        <article class={`${project.isFeatured ? 'project--featured':'project'}`}>
                 <img id={project.abbreviation} src={project_image} alt={project.alt_text}/>
                 <div class="project_title-container">
                     <h4 class="project_title">{project.name}</h4>
