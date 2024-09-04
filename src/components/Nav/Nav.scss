@@ -74,15 +74,21 @@ nav {
     
   }
   &__links{
+   
     display: flex;
     flex: 1;
     max-width: 25rem;
     justify-content: space-between;
     margin-top: 3rem
   }
-
+  &__link {
+    text-decoration: none;
+    color: white;
+    
+  }
   &__link:hover{
     text-decoration: underline;
+    transform: scale(1.05);
   }
   &__design{
     background-color:$background-color;
@@ -141,3 +147,6 @@ nav {
   }}
 
 
+.svg{
+  position:relative;
+}

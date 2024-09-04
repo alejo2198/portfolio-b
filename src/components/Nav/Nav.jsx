@@ -46,16 +46,28 @@ const Nav = () => {
                 <div className="logo">
                     <a href="" className="logo__text">&lt;AC/&gt;</a>
                 </div>
-            <ul className="nav__links">
-                <li><a href="#about" className="nav__link">Home</a></li>
-                <li><a href="#skills" className="nav__link">Skills</a></li>
-                <li><a href="#projects" className="nav_link">Projects</a></li>
-                <li><a href="#contact" className="nav__link">Contact</a></li>
-            </ul>
+                {isMobile && 
+                
+                <ul className="nav__links">
+                    <li><a href="#about" className="nav__link">Home</a></li>
+                    <li><a href="#skills" className="nav__link">Skills</a></li>
+                    <li><a href="#projects" className="nav__link">Projects</a></li>
+                    <li><a href="#contact" className="nav__link">Contact</a></li>
+                </ul>
+                }
+            
                 <a className={`${isMobile ? '' : 'hide'}`} href="#" onClick={toggleNav} >
                     <img src={closeIcon} alt="an x symbol"/>
                 </a>
             </div>
+            {!isMobile && 
+                <ul className="nav__links">
+                    <li><a href="#about" className="nav__link">Home</a></li>
+                    <li><a href="#skills" className="nav__link">Skills</a></li>
+                    <li><a href="#projects" className="nav__link">Projects</a></li>
+                    <li><a href="#contact" className="nav__link">Contact</a></li>
+                </ul>
+                }
           
             <div className={`nav__design ${isMobile ? '' : 'hide'}`}>
                 &nbsp;
