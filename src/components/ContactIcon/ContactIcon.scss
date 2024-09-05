@@ -3,18 +3,7 @@
 @use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/animations' as *;
 
-.contact_icons {
-    margin-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 1.7rem;
-    row-gap: 1.2rem;
-    max-width: 80%;
-    align-self: center;
-  }
-  
+
   .contact_link {
     display: flex;
     flex-direction: column;

@@ -39,34 +39,34 @@ const About = () => {
 
   return (
     <section id="about" className="about">
-      <h1 className="about_name">
+      <h1 className="about__name">
         Alejandro Castro{" "}
-        <span className="about_name--subheader">Junior Web Developer</span>
+        <span className="about__name--subheader">Junior Web Developer</span>
       </h1>
-      <div className="layout-wrapper">
+      <div className="about__layout-wrapper">
         <img
-          className="profile_image"
+          className="about__headshot"
           src={headShot}
           alt="headshot of Alejandro Castro"
         />
-        <div className="content-wrapper">
+        <div className="about__content-wrapper">
           <h3>About Me</h3>
-          <p className="about_paragraph">
+          <p className="about__paragraph">
             I’m a passionate full-stack junior web developer who loves solving
             problems in innovative ways.{" "}
           </p>
-          <p className="about_paragraph">
+          <p className="about__paragraph">
             I have college, university, boot-camp and freelance experience that
             I leverage to find my way around the trickiest of problems.
           </p>
           <h3>Interests</h3>
-          <ul className="about_interests_list">
-            <li className="about_interest">React Development</li>
-            <li className="about_interest">Three JS and 3D web development</li>
-            <li className="about_interest">UX/UI Design and animations</li>
+          <ul className="about__interests_list">
+            <li className="about__interest">React Development</li>
+            <li className="about__interest">Three JS and 3D web development</li>
+            <li className="about__interest">UX/UI Design and animations</li>
           </ul>
         </div>
-        <ul className="contact_icons">
+        <ul className="contact__icons">
           {contactIcons.map((contactIcon, index) => {
             return (
               <li key={index}>

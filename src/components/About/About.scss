@@ -8,6 +8,17 @@
   flex-direction: column;
   align-items: flex-start;
   margin-top: 3.8rem;
+  @include tablet{
+    width: 100%; /* Main content width will be 100% minus the space for the aside */ /* Set a max width to limit how wide the main content can be */
+    margin: 0 auto;    /* Center the content */
+    padding-left: 3.7rem; 
+    padding-right:0;
+  }
+  &__layout-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
 
   &_name{
     margin:0 auto;
@@ -27,113 +38,128 @@
     @include tablet{
         font-size: 2.625rem;
         margin-bottom: 2.75rem;
+        margin-top:2.62rem
     }
     @include desktop{
       font-size: 3.125rem;
       margin-bottom: 2rem;
     }
     }
-
-    &_paragraph{
-      margin-bottom: 1rem;
+    &__headshot {
+      width: 15rem;
+      height: 20rem;
+      object-fit: cover;
+      object-position: center;
+      align-self: center;
+      border-radius: 7.7rem;
+      overflow: hidden;
+      border: 0.56rem solid #181c2c;
+      outline: 1px white solid;
+      margin-bottom: 1.22rem;
     }
-    &_interests_list{
+    &__content-wrapper{
+      @include tablet {
+        margin-top: 2rem;
+        width: 50%;
+      }
+    }
+
+    &__paragraph{
+      margin-bottom: 1rem;
+      
+    }
+    &__interests_list{
       list-style-type: disc;
       margin-left: 1.2rem;
     }
-    &_interest{
+    &__interest{
       font-size: 0.875rem;
     }
   }
 
-.profile_image {
-  width: 15rem;
-  height: 20rem;
-  object-fit: cover;
-  object-position: center;
-  align-self: center;
-  border-radius: 7.7rem;
-  overflow: hidden;
-  border: 0.56rem solid #181c2c;
-  outline: 1px white solid;
-  margin-bottom: 1.22rem;
-}
-  
-  
-.layout-wrapper {
-  display: flex;
-  flex-direction: column;
-  
-}
-  
-  @media only screen and (min-width: 768px) {
-    .layout-wrapper {
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    .content-wrapper {
-      width: 50%;
-    }
-  
-    .contact_icons {
-      max-width: 100%;
-      margin-top: 2rem;
-      column-gap: normal;
-      row-gap: normal;
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: space-between;
-    }
-  
-    .contact_link p {
-      font-size: 1.125rem;
-      font-weight: 700;
-    }
-    .icon-container {
-      width: 3.75rem;
-      height: 3.75rem;
-    }
-    .contact_icon {
-      width: 1.875rem;
-    }
-    .resume {
-      height: 1.875rem;
-    }
+  .contact__icons {
+    max-width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 1rem;
   }
   
-  @media only screen and (min-width: 1080px) {
-    .about {
-      margin-top: 2.5rem;
-    }
-    .about_interest {
-      font-size: 1rem;
-    }
-    .layout-wrapper {
-      align-items: center;
-    }
-    .profile_image {
-      width: 20.3rem;
-      height: 29.26875rem;
-      border-radius: 11rem;
-      order: 2;
-    }
-    .content-wrapper {
-      width: 28%;
-      order: 1;
-      align-self: center;
-    }
-    .contact_icons {
-      width: 28%;
-      flex-direction: column;
-      gap: 1.25rem;
-      order: 3;
-    }
-    .contact_link {
-      flex-direction: row;
-      width: 9.4rem;
-      justify-content: flex-start;
-      gap: 0.75rem;
-    }
-  }
+
+
+  
+  
+
+  
+//   @include tablet {
+//     .layout-wrapper {
+//       flex-wrap: wrap;
+//       flex-direction: row;
+//       justify-content: space-between;
+//       max-width:35rem;
+//       margin:0 auto;
+//     }
+//     .contact_icons {
+//       max-width: 100%;
+//       margin-top: 2rem;
+//       display: flex;
+//       width: 100%;
+//       align-items: center;
+//       justify-content: space-between;
+//     }
+  
+//     .contact_link p {
+//       font-size: 1.125rem;
+//       font-weight: 700;
+//     }
+//     .icon-container {
+//       width: 3.75rem;
+//       height: 3.75rem;
+//     }
+//     .contact_icon {
+//       width: 1.875rem;
+//     }
+//     .resume {
+//       height: 1.875rem;
+//     }
+//   }
+  
+//  @include desktop {
+//     .about {
+//       margin-top: 2.5rem;
+//     }
+//     .about_interest {
+//       font-size: 1rem;
+//     }
+//     .layout-wrapper {
+//       align-items: center;
+//       max-width: 100%;
+//     }
+//     .profile_image {
+//       width: 20.3rem;
+//       height: 29.26875rem;
+//       border-radius: 11rem;
+//       order: 2;
+//     }
+//     .content-wrapper {
+//       width: 28%;
+//       order: 1;
+//       align-self: center;
+//     }
+//     .contact_icons {
+//       width: 28%;
+//       flex-direction: column;
+//       gap: 1.25rem;
+//       order: 3;
+//     }
+//     .contact_link {
+//       flex-direction: row;
+//       width: 9.4rem;
+//       justify-content: flex-start;
+//       gap: 0.75rem;
+//     }
+//   }

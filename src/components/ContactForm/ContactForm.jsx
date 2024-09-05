@@ -13,15 +13,15 @@ const ContactForm = () => {
             </div>
             <form className="form">
                 <div className="control_group">
-                    <label className="label" for="full_name">Name</label>
+                    <label className="label" htmlFor="full_name">Name</label>
                     <input type="text" name="full_name" id="full_name" placeholder="John Doe"/>
                 </div>
                 <div className="control_group">
-                    <label className="label" for="company">Company</label>
+                    <label className="label" htmlFor="company">Company</label>
                     <input type="text" name="company" id="company" placeholder="Amazon"/>
                 </div>
                 <div className="control_group">
-                    <label className="label" for="message">Message</label>
+                    <label className="label" htmlFor="message">Message</label>
                     <textarea name="message" id="message"></textarea>
                 </div>
                 <button type="submit">Send Message</button>

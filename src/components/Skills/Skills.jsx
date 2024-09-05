@@ -52,26 +52,26 @@ const Skills = () => {
     return(
         <section id="skills" className="skills">
         <h2>Skills</h2>
-        <ul className="skills_navigation">
-            <img className="skills_icon--left" src={arrow} alt="an arrow pointed right for navigation" onClick={() => {changeMobileSkillType(-1)}}/>
-            <li className={`skills_tab ${skillType === "front_end" ? 'selected':'hide'}`} onClick={() => {changeSkillType("front_end")}}>Front-End</li>
-            <li className={`skills_tab ${skillType === "back_end" ? 'selected':'hide'}`} onClick={() => {changeSkillType("back_end")}}>Back-End</li>
-            <li className={`skills_tab ${skillType === "project_management" ? 'selected':'hide'}`} onClick={() => {changeSkillType("project_management")}}>Project Management</li>
-            <img className="skills_icon--right" src={arrow} alt="an arrow pointed right for navigation" onClick={() => {changeMobileSkillType(1)}}/>
+        <ul className="skills__navigation">
+            <img className="skills__icon--left" src={arrow} alt="an arrow pointed right for navigation" onClick={() => {changeMobileSkillType(-1)}}/>
+            <li className={`skills__tab ${skillType === "front_end" ? 'selected':'hide'}`} onClick={() => {changeSkillType("front_end")}}>Front-End</li>
+            <li className={`skills__tab ${skillType === "back_end" ? 'selected':'hide'}`} onClick={() => {changeSkillType("back_end")}}>Back-End</li>
+            <li className={`skills__tab ${skillType === "project_management" ? 'selected':'hide'}`} onClick={() => {changeSkillType("project_management")}}>Project Management</li>
+            <img className="skills__icon--right" src={arrow} alt="an arrow pointed right for navigation" onClick={() => {changeMobileSkillType(1)}}/>
         </ul>
         <div className="skills-container">
-            <ul className="skills_list">
+            <ul className="skills__list">
                {filteredSkillList.map((skill,index) => {
                 return (
                     <Skill key={index} skill={skill}/>
                 )
                })}
             </ul>
-            <div className="skills_description-container">
+            <div className="skills__description-container">
                 <div className="blur">&nbsp;</div>
-                <div className="skills_content">
-                    <p className="skills_paragraph">I would describe my design style as clean and simple with a pop of colour.  I enjoy keeping up to date with  design trends.</p>
-                    <p className="skills_paragraph">I have complete confidence that I can bring my designs to life using my front-end development skills.</p>
+                <div className="skills__content">
+                    <p className="skills__paragraph">I would describe my design style as clean and simple with a pop of colour.  I enjoy keeping up to date with  design trends.</p>
+                    <p className="skills__paragraph">I have complete confidence that I can bring my designs to life using my front-end development skills.</p>
                 </div>
             </div>
         </div>

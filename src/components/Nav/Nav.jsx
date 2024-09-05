@@ -11,7 +11,7 @@ const Nav = () => {
         return width;
     }
     const [isNavClosed,setIsNavClosed] = useState(true);
-    const [isMobile,setIsMobile] = useState(getWindowWidth() < 767);
+    const [isMobile,setIsMobile] = useState(getWindowWidth() <= 767);
     const [windowWidth, setWindowWidth] = useState(getWindowWidth());
 
     const toggleNav = (event) => {
@@ -28,12 +28,11 @@ const Nav = () => {
     }, []);
 
     useEffect(()=>{
-        if(windowWidth < 767){
+        if(windowWidth <= 767){
             setIsMobile(true);
         } else{
             setIsMobile(false)
         }
-        console.log(isMobile)
     },[windowWidth]);
 
     return (

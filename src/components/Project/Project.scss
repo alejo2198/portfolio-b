@@ -4,44 +4,74 @@
 @use '../../styles/partials/animations' as *;
 
 .project{
-    width: 18.125rem;
-    height: 50rem;
-    // height: 32rem;
+    width: 26.875rem;
+    height: 30.1875rem;
+    padding: 1.5rem;
     border-radius: 1.25rem;
     background: rgba(0, 0, 0, 0.2);
-    padding: 1.25rem;
     display: flex;
     flex-direction: column;
+
+    &--featured{
+      @extend .project;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 5px 0px #9290c3;
+    }
     
-    &_title-container{
+    &__title-container{
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         margin-top: 0.75rem;
         position: relative;
     }
-    &_title{
+    &__title{
         font-size: 1.125rem;
         font-weight: 700;
+        width:65%;
     }
-    &_link{
+    &__link{
         display: flex;
         gap: 0.2rem;
         border-bottom: 1px solid #9290c3;
         padding-bottom: 0.2rem;
     }
-    &_link p {
+    &__link p {
         width: 4.3rem;
         color: #9290c3;
       }
-    &_link img{
+    &__link img{
       height:1rem;
+    }
+   
+    &__description {
+      margin-top: 0.75rem;
+    }
+    
+    &__languages {
+      display: flex;
+      gap: 1rem;
+      margin-top: auto;
+    }
+    &__skill {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.7rem;
+      border-radius: 0.3125rem;
+      background-color: #37364a;
+    }
+    &__skill_name {
+      text-transform: uppercase;
+    }
+   
+    &__link p {
+      width: fit-content;
+    }
+    &__skill_name {
+      text-align: center;
     }
   }
 
-  .project--featured{
-    @extend .project;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 5px 0px #9290c3;
-  }
   .featured {
     width: max-content;
     font-weight: 700;
@@ -49,49 +79,4 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  .project_description {
-    margin-top: 0.75rem;
-  }
-  
-  .project_languages {
-    display: flex;
-    gap: 1rem;
-    margin-top: auto;
-  }
-  .project_skill {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0.7rem;
-    border-radius: 0.3125rem;
-    background-color: #37364a;
-  }
-  .project_skill_name {
-    text-transform: uppercase;
-  }
-  .project_link--absolute {
-    position: absolute;
-    display: flex;
-    gap: 0.75rem;
-    border-bottom: 1px solid #9290c3;
-    padding-bottom: 0.2rem;
-    flex-grow: 1;
-    right: 0;
-    top: 0;
-    color: #9290c3;
-  }
-  .projects-container {
-    row-gap: 4.7rem;
-  }
-  .project {
-    width: 26.875rem;
-    height: 32.1875rem;
-    padding: 1.5rem;
-  }
-  .project_link p {
-    width: fit-content;
-  }
-  .project_skill_name {
-    text-align: center;
   }

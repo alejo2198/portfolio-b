@@ -25,23 +25,23 @@ const Project = ({project}) => {
 
 
     return (
-        <article class={`${project.isFeatured ? 'project--featured':'project'}`}>
+        <article className={`${project.isFeatured ? 'project--featured':'project'}`}>
                 <img id={project.abbreviation} src={project_image} alt={project.alt_text}/>
-                <div class="project_title-container">
-                    <h4 class="project_title">{project.name}</h4>
-                    <a href={project.link} class="project_link">
+                <div className="project__title-container">
+                    <h4 className="project__title">{project.name}</h4>
+                    <a href={project.link} className="project__link">
                         <p>Visit Site</p>
                         <img src={visit_link} alt="arrow"/>
                     </a>
                 </div>
-                {project.isFeatured && <p class="featured">Featured Project</p>}
-                <p class="project_description">{project.description}</p>
-                <ul class="project_languages">
+                {project.isFeatured && <p className="featured">Featured Project</p>}
+                <p className="project__description">{project.description}</p>
+                <ul className="project__languages">
                     {project.languages.map((element,index) => {
                         return (
-                            <li key={index} class="project_skill">
-                                <i class={`${element.icon} project_skill_icon`} title={`icon for ${element.name}`}></i>
-                                <p class="project_skill_name">{element.name}</p>
+                            <li key={index} className="project__skill">
+                                <i className={`${element.icon} project__skill_icon`} title={`icon for ${element.name}`}></i>
+                                <p className="project__skill_name">{element.name}</p>
                             </li>
                         )
                     })}

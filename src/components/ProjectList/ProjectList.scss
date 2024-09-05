@@ -8,17 +8,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.37rem;
-  }
-  
-  @media only screen and (min-width: 768px) {
-    .projects-container {
+    gap: 1rem;
+    @include tablet {
       justify-content: space-evenly;
       gap: min(4vw, 3rem);
     }
   }
   
-  @media only screen and (min-width: 1080px) {
+  @include desktop {
     #qrp {
       content: url("../../assets/images/projects/qrp-desktop.png");
     }
