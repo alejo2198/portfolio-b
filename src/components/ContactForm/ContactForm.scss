@@ -1,6 +1,9 @@
 /* CONTACT */
-
-.contact_text {
+@use '../../styles/partials/mixins' as *;
+@use '../../styles//partials/variables'as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/animations' as *;
+.contact__text {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -15,7 +18,7 @@
     flex-direction: column;
     gap: 1rem;
   }
-  .control_group {
+  .control__group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -55,13 +58,13 @@
     border: none;
   }
   
-  @media only screen and (min-width: 768px) {
-    .contact_wrapper {
+  @include tablet{
+    .contact__wrapper {
       display: flex;
       gap: 2rem;
     }
   
-    .contact_text {
+    .contact__text {
       flex-basis: 33%;
     }
     .form {
@@ -69,12 +72,12 @@
       margin-top: 0;
     }
   }
-  @media only screen and (min-width: 1080px) {
-    .contact_wrapper {
+  @include desktop {
+    .contact__wrapper {
       gap: 4.5rem;
     }
   
-    .contact_text {
+    .contact__text {
       flex-basis: 28%;
     }
     button[type="submit"] {
