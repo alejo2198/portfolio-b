@@ -20,7 +20,7 @@
   }
   
 
-  &_name{
+  &__name{
     margin:0 auto;
     text-align: center;
     font-size: 1.625rem;
@@ -31,7 +31,7 @@
     -webkit-text-fill-color: transparent;
     margin-bottom: 1.13rem;
     position: relative;
-    z-index:4;
+    z-index:10;
     &--subheader{
       display: block;
     }
