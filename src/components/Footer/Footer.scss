@@ -14,6 +14,10 @@
   @include tablet{
     padding: 1.5rem 0;
   }
+  @include desktop{
+    margin-top: 4rem;
+  }
+  
 
   &__design {
     position: absolute;
@@ -57,6 +61,9 @@
       justify-content: center;
       margin-top: 0;
     }
+    @include desktop{
+      flex-direction: row;
+    }
   }
   &__icon-container {
     background-color: #9290c3;
@@ -76,8 +83,21 @@
       max-width: 50rem;
       margin: 0 auto;
     }
+    @include desktop{
+      max-width: 90rem;
+      padding: 0;
+    }
   }
-  
+  &__contact__link{
+    @include desktop{
+      width: fit-content;
+    }
+  }
+  &__text{
+    @include desktop{
+      width: 35%;
+    }
+  }
 }
 
 .contact__link:hover .footer__icon-container{
@@ -119,59 +139,4 @@
   }
 }
 
-@include desktop {
-  .footer {
-    margin-top: 4rem;
-  }
-  h5 {
-    font-size: 2rem;
-  }
-  .footer_wrapper {
-    display: flex;
-    gap: 5rem;
-    padding-left: 0rem;
-    padding-right: 0rem;
-    max-width: 100%;
-  }
-  .footer_content {
-    width: 100%;
-  }
-  .footer_content p {
-    width: 37%;
-  }
-  .footer_icons {
-    width: 50%;
-    flex-direction: row;
-    row-gap: 1.4rem;
-    column-gap: 1.3rem;
-    justify-content: center;
-    margin-top: 0;
-  }
-  .footer_icons li {
-    width: 3.75rem;
-  }
-
-  .footer_icon-container {
-    width: 3.75rem;
-    height: 3.75rem;
-  }
-  .footer_contact_icon {
-    width: 1.875rem;
-  }
-  .resume {
-    height: 1.875rem;
-  }
-
-  .footer_design {
-    height: 15rem;
-
-    top: -14.9rem;
-  }
-  .footer_design_invert {
-    height: 15rem;
-  }
-  .footer_design_invert-section {
-    height: 15rem;
-  }
-}
 

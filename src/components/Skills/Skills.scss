@@ -6,7 +6,6 @@
 .skills{
 
     @include tablet{
-    
       margin-top:2rem
     }
     
@@ -24,6 +23,11 @@
         @include tablet{
             background-color:$primary-color ;
             justify-content: flex-start;
+        }
+        @include desktop{
+            width: 60%;
+            margin: 0;
+           
         }
     }
     &__icon{
@@ -79,6 +83,12 @@
           border-radius:1.25rem ;
           padding:2rem
         }
+        @include desktop{
+            width:100%;
+            border-radius: 0 1.25rem 1.25rem 1.25rem;
+            display: flex;
+            gap:3rem
+        }
     }
     &__list{
         display: flex;
@@ -86,6 +96,9 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 1rem;
+        @include desktop{
+            justify-content: space-between;
+        }
     }
     &__description-container{
         margin-top: 1rem;
@@ -100,6 +113,10 @@
         border-radius: 1.25rem;
         position: relative;
         z-index: -2;
+        @include desktop{
+            margin-top: 0;
+            padding: 2rem;
+        }
     }
     &__content{
         position: relative;

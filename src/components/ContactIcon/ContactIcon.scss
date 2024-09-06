@@ -10,6 +10,12 @@
     align-items: center;
     justify-content: center;
     gap: 0.3rem;
+    @include desktop{
+      flex-direction: row;
+      gap: .75rem;
+      justify-content: flex-start;
+      width: 10rem;
+    }
 
     &:hover .icon-container{
         background-color:#9290c3;

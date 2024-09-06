@@ -45,6 +45,7 @@
     @include desktop{
       font-size: 3.125rem;
       margin-bottom: 2rem;
+      margin-top: 1.85rem;
     }
     }
     &__headshot {
@@ -117,41 +118,39 @@
 }
   
   
-//  @include desktop {
-//     .about {
-//       margin-top: 2.5rem;
-//     }
-//     .about_interest {
-//       font-size: 1rem;
-//     }
-//     .layout-wrapper {
-//       align-items: center;
-//       max-width: 100%;
-//     }
-//     .profile_image {
-//       width: 20.3rem;
-//       height: 29.26875rem;
-//       border-radius: 11rem;
-//       order: 2;
-//     }
-//     .content-wrapper {
-//       width: 28%;
-//       order: 1;
-//       align-self: center;
-//     }
-//     .contact_icons {
-//       width: 28%;
-//       flex-direction: column;
-//       gap: 1.25rem;
-//       order: 3;
-//     }
-//     .contact_link {
-//       flex-direction: row;
-//       width: 9.4rem;
-//       justify-content: flex-start;
-//       gap: 0.75rem;
-//     }
-//   }
+ @include desktop {
+    .about {
+      margin-top: 2.5rem;
+    }
+    .about__interest {
+      font-size: 1rem;
+    }
+    .layout-wrapper {
+      align-items: center;
+      max-width: 100%;
+    }
+    .about__headshot {
+      width: 20.3rem;
+      height: 29.26875rem;
+      border-radius: 11rem;
+      order: 2;
+    }
+    .about__content-wrapper {
+      margin-top: 0;
+      width: 28%;
+      order: 1;
+      align-self: center;
+    }
+    .contact__icons {
+      width: 28%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.25rem;
+      order: 3;
+    }
+   
+  }
   
 
 

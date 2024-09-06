@@ -12,6 +12,9 @@
     border-radius: 0.3125rem;
     background-color: #37364a;
     cursor: pointer;
+    @include tablet{
+      width: 10rem;
+    }
     &:hover{
         background: linear-gradient(95deg, #37364A 1.25%, #9290C3 20.72%, #37364A 100%);
     }
@@ -24,7 +27,7 @@
         text-align: center;
     }
 }
-@media only screen and (min-width: 768px) {
+@include tablet {
     .skill_navigation {
       justify-content: space-evenly;
       background-color: #535c91;
@@ -39,11 +42,7 @@
       align-items: center;
       justify-content: center;
     }
-    // .selected {
-    //   height: 100%;
-    //   background-color: #9290c3;
-    //   border-radius: 0.625rem 0.625rem 0rem 0rem;
-    // }
+
     .skill-container {
       border-radius: 1.25rem;
       width: 100%;
@@ -65,7 +64,7 @@
     }
   }
   
-  @media only screen and (min-width: 1080px) {
+  @include desktop{
     .skill_navigation {
       justify-content: space-evenly;
       background-color: #535c91;
