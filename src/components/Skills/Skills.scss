@@ -4,12 +4,10 @@
 @use '../../styles/partials/animations' as *;
 
 .skills{
-    padding:$small-spacing;
 
     @include tablet{
-      padding-left: 6.2rem;
-      padding-right: 0;
-      margin:0 auto
+    
+      margin-top:2rem
     }
     
     &__navigation{
@@ -24,7 +22,8 @@
         position: relative;
         top: 3px;
         @include tablet{
-
+            background-color:$primary-color ;
+            justify-content: flex-start;
         }
     }
     &__icon{
@@ -54,6 +53,20 @@
     &__tab{
         font-size: 1rem;
         font-weight: 500;
+        display:none;
+        @include tablet{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            border-radius: .625rem .625rem 0 0;;
+            height:100%;
+            cursor: pointer;
+        }
+        &--selected{
+            @extend .skills__tab;
+            background-color: $text-gradient-color;
+        }
     }
     &-container{
         width: 80%;

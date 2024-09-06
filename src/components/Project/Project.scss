@@ -5,12 +5,15 @@
 
 .project{
     width: 20rem;
-    height: 30.1875rem;
+    height: 32.1875rem;
     padding: 1.5rem;
     border-radius: 1.25rem;
     background: rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
+    @include tablet{
+      width: clamp(18.6rem,40%,20rem);
+    }
 
     &--featured{
       @extend .project;
