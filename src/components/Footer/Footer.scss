@@ -17,8 +17,6 @@
   @include desktop{
     margin-top: 4rem;
   }
-  
-
   &__design {
     position: absolute;
     height: 6rem;
@@ -69,12 +67,16 @@
     background-color: #9290c3;
     border: 0.31rem solid #535c91;
     outline: 1px solid white;
+    &:hover{
+      background-color: #2a3364 !important;
+    }
   }
   &__contact_icon {
     width: 1.6rem;
     filter: invert(100%) sepia(35%) saturate(2%) hue-rotate(314deg)
       brightness(111%) contrast(101%);
   }
+  
   &__wrapper{
     @include tablet{
       padding: 0 2.5rem;
@@ -99,12 +101,6 @@
     }
   }
 }
-
-.contact__link:hover .footer__icon-container{
-    background-color:#535c91;
-    border: 0.31rem solid #9290C3;
-}
-
 
 @include tablet{
   
