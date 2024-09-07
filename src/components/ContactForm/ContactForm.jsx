@@ -77,6 +77,7 @@ const ContactForm = () => {
           NameReset();
           EmailReset();
           CompanyReset();
+          MessageReset();
         },
         (error) => {
           console.log("FAILED...", error);
@@ -110,7 +111,7 @@ const ContactForm = () => {
         <div className="contact__text">
           <p>
             If you think I could be an asset to your web development team,
-            please send me a message.{" "}
+            please send me a message.
           </p>
           <p>
             I want to join a strong team where, under great mentorship, I could
